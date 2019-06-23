@@ -1,9 +1,7 @@
 package com.github.jersey;
 
 import com.sun.net.httpserver.HttpServer;
-import io.netty.channel.Channel;
 import org.glassfish.jersey.jdkhttp.JdkHttpServerFactory;
-import org.glassfish.jersey.netty.httpserver.NettyHttpContainerProvider;
 import org.glassfish.jersey.server.ResourceConfig;
 
 import javax.ws.rs.core.UriBuilder;
@@ -19,7 +17,7 @@ public class JerseyJdkApplication {
     }
 
     public static HttpServer startServer() {
-        ResourceConfig resourceConfig = new ResourceConfig().packages("com.github");
+        ResourceConfig resourceConfig = new ResourceConfig().packages("com.github.jersey");
         return JdkHttpServerFactory.createHttpServer(BASE_URI, resourceConfig);
     }
 }

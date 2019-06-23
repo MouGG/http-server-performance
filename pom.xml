@@ -11,6 +11,7 @@
     <properties>
         <jersey.version>2.28</jersey.version>
         <resteasy.version>3.7.0.Final</resteasy.version>
+        <jooby.version>RELEASE</jooby.version>
     </properties>
 
     <dependencyManagement>
@@ -26,7 +27,17 @@
     </dependencyManagement>
 
     <dependencies>
-    <dependency>
+        <dependency>
+            <groupId>org.jooby</groupId>
+            <artifactId>jooby</artifactId>
+            <version>${jooby.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jooby</groupId>
+            <artifactId>jooby-netty</artifactId>
+            <version>${jooby.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.glassfish.jersey.inject</groupId>
             <artifactId>jersey-hk2</artifactId>
         </dependency>
